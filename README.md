@@ -29,6 +29,7 @@ Berikut adalah antarmuka website premium yang dirancang responsif untuk berbagai
 
 ### 🏠 1. Halaman Beranda (Home Page)
 <img width="951" height="506" alt="Screenshot 2026-07-07 012939" src="https://github.com/user-attachments/assets/23630020-1c76-4e78-a4f8-b7a3ce876245" />
+
 Halaman utama dirancang sebagai *landing page* premium bertema *Glassmorphic* untuk memberikan impresi mewah kepada calon konsumen.
 * **Komponen Visual:**
   * **Hero Banner & Tagline:** Judul persuasif yang memosisikan toko sebagai penyedia gawai (*gadget*) orisinal bergaransi resmi.
@@ -39,6 +40,7 @@ Halaman utama dirancang sebagai *landing page* premium bertema *Glassmorphic* un
 
 ### 🛒 2. Katalog Produk
 <img width="944" height="528" alt="Screenshot 2026-07-07 013013" src="https://github.com/user-attachments/assets/26331074-218e-4e4f-99ea-c9165da7eaef" />
+
 Pusat etalase interaktif yang memuat hingga 51 item produk elektronik yang dikelola secara dinamis melalui JavaScript.
 * **🔍 Fitur Pencarian (Search Bar):** Pengguna dapat mengetik kata kunci berupa nama produk atau brand (misal: *iPhone, ASUS, Tecno*). Sistem akan menyaring dan menampilkan hasil yang cocok secara *real-time* tanpa perlu menekan tombol cari.
 * **🗂️ Menu Kategori (Category Tabs):** Menyaring produk secara instan berdasarkan kelompoknya hanya dengan sekali klik pada tab: **Semua**, **Smartphone**, **Laptop**, atau **Aksesoris**.
@@ -49,6 +51,7 @@ Pusat etalase interaktif yang memuat hingga 51 item produk elektronik yang dikel
 
 ### 🏷️ 3. Menu Promo
 <img width="950" height="518" alt="Screenshot 2026-07-07 013123" src="https://github.com/user-attachments/assets/4f60d979-b2d2-49ba-b855-64e7bc873d4b" />
+
 Bagian khusus yang dirancang menggunakan strategi psikologi penjualan (*scarcity & urgency*) untuk merangsang keputusan transaksi kilat.
 * **Countdown Timer:** Kotak penunjuk waktu dinamis yang menampilkan sisa jam, menit, dan detik promo secara *real-time* menggunakan fungsi hitung mundur otomatis.
 * **Etalase Produk Diskon:** Menyajikan barisan produk pilihan yang sedang dalam masa pemotongan harga dari harga normal.
@@ -59,6 +62,7 @@ Bagian khusus yang dirancang menggunakan strategi psikologi penjualan (*scarcity
 <img width="773" height="523" alt="Screenshot 2026-07-07 014122" src="https://github.com/user-attachments/assets/7d87da83-9597-4ef6-ab92-ab689987009e" />
 <img width="709" height="455" alt="Screenshot 2026-07-07 014156" src="https://github.com/user-attachments/assets/6393dd81-69ed-423b-b522-11befabcef60" />
 <img width="785" height="512" alt="Screenshot 2026-07-07 014213" src="https://github.com/user-attachments/assets/2acb2b9a-7f9f-4fac-91ce-0e8f69ac4b1b" />
+
 Alur transaksi konsumen dirancang sangat mulus, aman, dan terintegrasi lewat tiga tahapan utama:
 1. **Tahap 1: Eksplorasi Detail (Trigger Modal):** Saat kartu produk diklik, sistem memunculkan jendela *pop-up* (*Modal Detail*) yang menyajikan spesifikasi teknis mendalam, deskripsi, rating bintang, sisa stok gudang, serta tombol *"Tambah ke Keranjang"*.
 2. **Tahap 2: Manajemen Keranjang (Review State):** Ketika produk ditambahkan, lencana (*badge*) jumlah item pada ikon navigasi atas akan bertambah secara otomatis. Di dalam menu keranjang, pengguna dapat menambah/mengurangi kuantitas barang (`+` / `-`), melihat kalkulasi total harga otomatis, atau menghapus item yang batal dibeli.
@@ -69,6 +73,7 @@ Alur transaksi konsumen dirancang sangat mulus, aman, dan terintegrasi lewat tig
 <img width="917" height="525" alt="Screenshot 2026-07-07 063200" src="https://github.com/user-attachments/assets/e63f228f-ea81-41d5-b3c7-60b896e5bdce" />
 <img width="881" height="508" alt="Screenshot 2026-07-07 063223" src="https://github.com/user-attachments/assets/68fdfdb3-189e-4d08-a3d6-f049462f91a9" />
 <img width="941" height="488" alt="Screenshot 2026-07-07 063248" src="https://github.com/user-attachments/assets/607dcfd6-e8a6-4853-8445-31066226b8ff" />
+
 Halaman backend khusus bagi pengurus toko untuk memantau performa penjualan dan melakukan pengelolaan inventaris gudang.
 * **📊 Dashboard Analitik:** Menampilkan metrik data penting (Total produk aktif, sisa stok keseluruhan, dan target omzet). Dilengkapi dengan **Grafik Batang Tren Penjualan** dinamis yang digambar manual via HTML5 Canvas API (tanpa *library* luar) menggunakan gradasi warna linear modern.
 * **📦 Manajemen Produk (Sistem CRUD):** Kendali penuh atas manipulasi katalog yang terhubung langsung ke memori `localStorage` browser:
