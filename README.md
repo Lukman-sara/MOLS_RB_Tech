@@ -1,5 +1,6 @@
 # 📱 MOLS RB Tech - Premium Electronics Store
 **Tugas Project Ujian Akhir Semester (UAS) - Mata Kuliah E-Commerce / Pemrograman Web**
+<img width="1254" height="1254" alt="WhatsApp Image 2026-07-07 at 00 53 26" src="https://github.com/user-attachments/assets/fce3fce9-495b-47ab-b667-e4deba0a1912" 
 ---
 
 ## 👨‍🎓 Informasi Mahasiswa
@@ -28,9 +29,7 @@ Berikut adalah antarmuka website premium yang dirancang responsif untuk berbagai
 ## 📋 Panduan Fitur & Operasional Website
 
 ### 🏠 1. Halaman Beranda (Home Page)
-<img width="951" height="506" alt="Screenshot 2026-07-07 012939" src="https://github.com/user-attachments/assets/23630020-1c76-4e78-a4f8-b7a3ce876245" /><img width="1254" height="1254" alt="WhatsApp Image 2026-07-07 at 00 53 26" src="https://github.com/user-attachments/assets/2bb1b289-eecf-4825-a711-9f3f0dddc216" />
-<img width="1254" height="1254" alt="WhatsApp Image 2026-07-07 at 00 53 26" src="https://github.com/user-attachments/assets/fce3fce9-495b-47ab-b667-e4deba0a1912" />
-
+<img width="951" height="506" alt="Screenshot 2026-07-07 012939" src="https://github.com/user-attachments/assets/23630020-1c76-4e78-a4f8-b7a3ce876245" />
 Halaman utama dirancang sebagai *landing page* premium bertema *Glassmorphic* untuk memberikan impresi mewah kepada calon konsumen.
 * **Komponen Visual:**
   * **Hero Banner & Tagline:** Judul persuasif yang memosisikan toko sebagai penyedia gawai (*gadget*) orisinal bergaransi resmi.
