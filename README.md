@@ -88,7 +88,7 @@ Halaman backend khusus bagi pengurus toko untuk memantau performa penjualan dan 
 Untuk meninjau mekanisme interaktivitas (Add to Cart, Manajemen CRUD Produk, Sinkronisasi Grafik Canvas) secara *real-time*, silakan tonton video demo singkat berikut:
 
 ### 🎥 Video Demonstrasi MOLS RB Tech
-[![Klik untuk menonton video demo MOLS RB Tech](https://img.youtube.com/vi/example/0.jpg)](https://www.youtube.com/watch?v=example)
+(https://youtu.be/HXyeNYWkVDc)
 
 ---
 
