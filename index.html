@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOLS RB Tech | Premium Electronics Store</title>
+    <meta name="description" content="MOLS RB Tech - Toko elektronik premium terpercaya. Dapatkan Smartphone, Laptop, dan Aksesoris original dengan garansi resmi.">
+    <meta name="keywords" content="MOLS RB Tech, Toko Elektronik, Smartphone, Laptop, Aksesoris Premium">
+    
+    <meta property="og:title" content="MOLS RB Tech | Premium Electronics">
+    <meta property="og:description" content="Toko elektronik terlengkap dan terpercaya dengan pengalaman belanja kelas dunia.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader"></div>
+        <h2 class="gradient-text">MOLS RB Tech</h2>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-microchip"></i> MOLS RB <span>Tech</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#products" class="nav-link">Katalog Produk</a>
+                <a href="#promo" class="nav-link">Promo</a>
+                <a href="#about" class="nav-link">Tentang Kami</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-btn cart-btn" id="openCartBtn" title="Keranjang Belanja">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="icon-btn" id="adminLoginBtn" title="Portal Admin">
+                    <i class="fa-solid fa-user-shield"></i>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <section id="view-home" class="view-section active">
+            <div class="hero">
+                <div class="hero-bg-glow"></div>
+                <div class="container hero-container">
+                    <div class="hero-text reveal-up">
+                        <div class="badge-premium"><i class="fa-solid fa-award"></i> 100% Trusted Electronics Store</div>
+                        <h1>Elevate Your Tech <span>Lifestyle</span></h1>
+                        <p>Temukan inovasi terbaru. Kami menghadirkan koleksi Smartphone, Laptop, dan Aksesoris premium dengan jaminan keaslian dan layanan purna jual terbaik.</p>
+                        <div class="hero-buttons">
+                            <a href="#products" class="btn btn-gradient ripple">Mulai Belanja <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://wa.me/6282124135338" target="_blank" class="btn btn-outline ripple">Konsultasi WA</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat"><h3 class="gradient-text">10K+</h3><p>Pelanggan</p></div>
+                            <div class="stat"><h3 class="gradient-text">100%</h3><p>Garansi Resmi</p></div>
+                            <div class="stat"><h3 class="gradient-text">24/7</h3><p>Support</p></div>
+                        </div>
+                    </div>
+                    <div class="hero-img reveal-left">
+                        <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Laptop">
+                        <div class="floating-badge"><i class="fa-solid fa-star" style="color:gold;"></i> 4.9/5 Kepuasan</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-section reveal-up">
+                <div class="section-header text-center">
+                    <h2>Koleksi Terpopuler</h2>
+                    <p>Produk pilihan dengan penjualan terbaik minggu ini.</p>
+                </div>
+                <div class="products-grid" id="popularProductsGrid"></div>
+                <div class="text-center mt-2">
+                    <a href="#products" class="btn btn-outline">Lihat Semua Produk</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-products" class="view-section">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Katalog Produk</h1>
+                    <p>Eksplorasi teknologi tanpa batas.</p>
+                </div>
+            </div>
+            <div class="container mt-section">
+                <div class="filter-bar glass-card reveal-up">
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Cari nama atau brand (Misal: Samsung, ASUS)...">
+                    </div>
+                    <div class="filter-controls">
+                        <select id="filterCategory" class="modern-select">
+                            <option value="Semua">Semua Kategori</option>
+                            <option value="Smartphone">Smartphone</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Aksesoris">Aksesoris</option>
+                        </select>
+                        <select id="sortSelect" class="modern-select">
+                            <option value="default">Urutkan</option>
+                            <option value="price-asc">Harga Termurah</option>
+                            <option value="price-desc">Harga Tertinggi</option>
+                            <option value="name-asc">Nama A-Z</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="allProductsGrid"></div>
+            </div>
+        </section>
+
+        <section id="view-promo" class="view-section">
+            <div class="promo-hero">
+                <div class="container text-center reveal-up">
+                    <h1 class="gradient-text">Super Flash Sale</h1>
+                    <p>Diskon eksklusif hingga 40%. Waktu terbatas!</p>
+                    <div class="countdown" id="countdown">
+                        <div class="time-box"><span id="cd-days">00</span><small>Hari</small></div>
+                        <div class="time-box"><span id="cd-hours">00</span><small>Jam</small></div>
+                        <div class="time-box"><span id="cd-mins">00</span><small>Menit</small></div>
+                        <div class="time-box"><span id="cd-secs">00</span><small>Detik</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-section reveal-up">
+                <div class="section-header">
+                    <h2>Produk Promo Hari Ini</h2>
+                </div>
+                <div class="products-grid" id="promoProductsGrid"></div>
+            </div>
+        </section>
+
+        <section id="view-about" class="view-section">
+            <div class="page-header">
+                <div class="container"><h1>Tentang Kami</h1></div>
+            </div>
+            <div class="container mt-section grid-2">
+                <div class="reveal-up">
+                    <h2 class="gradient-text mb-1">MOLS RB Tech</h2>
+                    <p>Didirikan oleh <strong>Moch Lukman Saepul Rajib</strong>, MOLS RB Tech berkomitmen menjadi pusat elektronik premium terdepan yang tidak hanya menjual produk, tetapi juga memberikan solusi teknologi masa kini.</p>
+                    <ul class="benefit-list mt-2">
+                        <li><i class="fa-solid fa-check-double"></i> 100% Produk Original & BNIB</li>
+                        <li><i class="fa-solid fa-check-double"></i> Garansi Resmi Brand Terkait</li>
+                        <li><i class="fa-solid fa-check-double"></i> Pengiriman Aman Berasuransi</li>
+                    </ul>
+                </div>
+                <div class="reveal-left glass-card p-2">
+                    <h3>Hubungi Kami</h3>
+                    <ul class="contact-list mt-1">
+                        <li><div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div> <div><strong>WhatsApp</strong><br><a href="https://wa.me/6282124135338" target="_blank">0821-2413-5338</a></div></li>
+                        <li><div class="icon-box"><i class="fa-regular fa-envelope"></i></div> <div><strong>Email</strong><br><a href="mailto:seupulrajib12@gmail.com">seupulrajib12@gmail.com</a></div></li>
+                        <li><div class="icon-box"><i class="fa-brands fa-instagram"></i></div> <div><strong>Instagram</strong><br><a href="https://www.instagram.com/moluk_sara" target="_blank">@moluk_sara</a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>MOLS RB <span>Tech</span></h3>
+                <p>Pusat teknologi premium untuk menunjang gaya hidup modern Anda.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <a href="#home">Beranda</a>
+                <a href="#products">Katalog</a>
+                <a href="#promo">Promo Spesial</a>
+            </div>
+            <div class="footer-links">
+                <h4>Layanan Pelanggan</h4>
+                <a href="#about">Tentang Kami</a>
+                <a href="#contact">Kontak & Bantuan</a>
+                <a href="#">Klaim Garansi</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; <span id="currentYear"></span> MOLS RB Tech | Dikelola oleh Moch Lukman Saepul Rajib.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-content product-modal glass-card">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="product-detail-grid">
+                <div class="img-zoom-container">
+                    <img id="detailImg" src="" alt="Produk">
+                </div>
+                <div class="detail-info">
+                    <span id="detailBadge" class="badge-category"></span>
+                    <h2 id="detailName" class="mt-1"></h2>
+                    <h3 id="detailPrice" class="gradient-text price-lg mt-1"></h3>
+                    <div class="detail-meta mt-1">
+                        <span><i class="fa-solid fa-star" style="color:gold;"></i> <span id="detailRating"></span>/5</span>
+                        <span><i class="fa-solid fa-box"></i> Stok: <span id="detailStock"></span></span>
+                    </div>
+                    <div class="divider"></div>
+                    <p id="detailDesc" class="text-muted"></p>
+                    <div class="divider"></div>
+                    <button class="btn btn-gradient w-100 ripple" id="detailAddToCartBtn">
+                        <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-content checkout-modal glass-card">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="stepper" id="checkoutStepper">
+                <div class="step active" data-step="1">1. Keranjang</div>
+                <div class="step" data-step="2">2. Pengisian Data</div>
+                <div class="step" data-step="3">3. Pembayaran</div>
+            </div>
+
+            <div id="step-1" class="checkout-step active">
+                <div id="cartItemsContainer" class="cart-items-list"></div>
+                <div class="cart-summary glass-panel mt-1">
+                    <div class="summary-row"><span>Subtotal</span> <strong id="cartSubtotal">Rp 0</strong></div>
+                    <div class="summary-row"><span>Estimasi Ongkir</span> <strong class="text-muted">Dihitung di langkah 2</strong></div>
+                    <div class="divider"></div>
+                    <div class="summary-row total"><span class="gradient-text">Total</span> <strong id="cartTotal" class="gradient-text">Rp 0</strong></div>
+                </div>
+                <div class="modal-actions mt-2">
+                    <button class="btn btn-outline" id="clearCartBtn"><i class="fa-solid fa-trash"></i> Kosongkan</button>
+                    <button class="btn btn-gradient" id="btnNextToShipping">Lanjut Pengisian Data <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div id="step-2" class="checkout-step">
+                <form id="shippingForm" class="modern-form">
+                    <div class="form-grid-2">
+                        <input type="text" id="coName" placeholder="Nama Penerima" required>
+                        <input type="tel" id="coPhone" placeholder="Nomor WhatsApp" required>
+                    </div>
+                    <input type="email" id="coEmail" placeholder="Email Valid (Untuk Invoice)" required>
+                    <textarea id="coAddress" placeholder="Alamat Lengkap Pengiriman" rows="3" required></textarea>
+                    <div class="form-grid-3">
+                        <input type="text" placeholder="Kota" required>
+                        <input type="text" placeholder="Provinsi" required>
+                        <input type="text" placeholder="Kode Pos" required>
+                    </div>
+                    <div class="modal-actions mt-2">
+                        <button type="button" class="btn btn-outline" id="btnBackToCart">Kembali</button>
+                        <button type="submit" class="btn btn-gradient">Lanjut Pembayaran <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="step-3" class="checkout-step">
+                <div class="payment-selection">
+                    <h3>Pilih Metode Pembayaran</h3>
+                    <select id="paymentMethod" class="modern-select mt-1" required>
+                        <option value="">-- Pilih --</option>
+                        <option value="QRIS">QRIS (GoPay, OVO, ShopeePay)</option>
+                        <option value="VA_BCA">Virtual Account BCA</option>
+                        <option value="VA_MANDIRI">Virtual Account Mandiri</option>
+                        <option value="Midtrans">Midtrans Gateway</option>
+                    </select>
+                </div>
+                
+                <div class="payment-breakdown glass-panel mt-1">
+                    <div class="summary-row"><span>Subtotal Produk</span> <strong id="paySubtotal"></strong></div>
+                    <div class="summary-row"><span>Biaya Pengiriman</span> <strong id="payShipping">Rp 25.000</strong></div>
+                    <div class="summary-row"><span>Biaya Layanan/Admin</span> <strong id="payAdmin">Rp 2.500</strong></div>
+                    <div class="divider"></div>
+                    <div class="summary-row total"><span>Total Tagihan</span> <strong id="payGrandTotal" class="gradient-text"></strong></div>
+                </div>
+
+                <div class="modal-actions mt-2">
+                    <button type="button" class="btn btn-outline" id="btnBackToShipping">Kembali</button>
+                    <button type="button" class="btn btn-gradient" id="btnProcessPayment"><i class="fa-solid fa-shield-check"></i> Bayar Sekarang</button>
+                </div>
+            </div>
+
+            <div id="step-4" class="checkout-step text-center">
+                <i class="fa-solid fa-circle-check" style="font-size:4rem; color:var(--success); margin-bottom:1rem;"></i>
+                <h2 class="gradient-text">Pembayaran Berhasil!</h2>
+                <p>Pesanan Anda sedang diproses. Invoice telah dikirim ke email Anda.</p>
+                <div class="invoice-box glass-panel text-left mt-1">
+                    <p><strong>Order ID:</strong> <span id="invOrderId"></span></p>
+                    <p><strong>Status:</strong> <span class="badge-success">Lunas (Paid)</span></p>
+                    <p><strong>Metode:</strong> <span id="invMethod"></span></p>
+                    <p>Stok produk telah otomatis disesuaikan.</p>
+                </div>
+                <button class="btn btn-gradient mt-2 w-100" id="btnFinishOrder">Selesai</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="adminLoginModal">
+        <div class="modal-content small-modal glass-card text-center">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="gradient-text mb-1"><i class="fa-solid fa-lock"></i> Admin Portal</h2>
+            <p class="text-muted"><small>User: admin | Pass: admin123</small></p>
+            <form id="adminLoginForm" class="modern-form mt-1">
+                <input type="text" id="adminUser" placeholder="Username" required>
+                <input type="password" id="adminPass" placeholder="Password" required>
+                <button type="submit" class="btn btn-gradient w-100 mt-1 ripple">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="adminDashboardModal">
+        <div class="modal-content admin-modal glass-card">
+            <div class="admin-header">
+                <h2><i class="fa-solid fa-gauge"></i> MOLS Admin Center</h2>
+                <button class="btn btn-outline close-modal" id="adminLogoutBtn"><i class="fa-solid fa-sign-out"></i> Logout</button>
+            </div>
+            
+            <div class="admin-body">
+                <aside class="admin-sidebar">
+                    <button class="admin-tab active" data-tab="tab-dash"><i class="fa-solid fa-chart-pie"></i> Dashboard</button>
+                    <button class="admin-tab" data-tab="tab-products"><i class="fa-solid fa-box"></i> Manajemen Produk</button>
+                    <button class="admin-tab" data-tab="tab-orders"><i class="fa-solid fa-shopping-bag"></i> Pesanan & Logistik</button>
+                    <button class="admin-tab" data-tab="tab-customers"><i class="fa-solid fa-users"></i> Pelanggan</button>
+                    <button class="admin-tab" data-tab="tab-marketing"><i class="fa-solid fa-bullhorn"></i> Pemasaran & Kupon</button>
+                    <button class="admin-tab" data-tab="tab-settings"><i class="fa-solid fa-cog"></i> Pengaturan Toko</button>
+                </aside>
+                
+                <main class="admin-content">
+                    <div id="tab-dash" class="admin-pane active">
+                        <div class="stats-grid">
+                            <div class="stat-card"><h3>Omzet Bulan Ini</h3><h2 class="gradient-text">Rp 83,5jt</h2><small class="text-success">+12% vs bulan lalu</small></div>
+                            <div class="stat-card"><h3>Pesanan Pending</h3><h2 class="gradient-text" id="dashPendingOrder">0</h2><small>Butuh diproses segera</small></div>
+                            <div class="stat-card"><h3>Total Produk Aktif</h3><h2 class="gradient-text" id="dashTotalProduct">0</h2><small>Update realtime</small></div>
+                        </div>
+                        <div class="chart-container glass-panel mt-2">
+                            <h3>Grafik Tren Penjualan Harian</h3>
+                            <canvas id="salesChart" height="80"></canvas>
+                        </div>
+                    </div>
+
+                    <div id="tab-products" class="admin-pane">
+                        <div class="d-flex justify-between align-center mb-1">
+                            <h3>Manajemen Produk & Stok</h3>
+                            <button class="btn btn-gradient btn-sm" id="btnAddNewProduct"><i class="fa-solid fa-plus"></i> Tambah Produk</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead><tr><th>ID</th><th>Nama Produk</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Aksi</th></tr></thead>
+                                <tbody id="adminProductsTbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="tab-orders" class="admin-pane">
+                        <h3>Daftar Pesanan Masuk</h3>
+                        <div class="table-responsive mt-1">
+                            <table class="admin-table">
+                                <thead><tr><th>Order ID</th><th>Pelanggan</th><th>Total Tagihan</th><th>Metode</th><th>Status</th></tr></thead>
+                                <tbody id="adminOrdersTbody">
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div id="tab-customers" class="admin-pane"><h3>Database Pelanggan</h3><p class="text-muted">Data pembeli terdaftar (Dummy UI).</p></div>
+                    <div id="tab-marketing" class="admin-pane"><h3>Kupon & Promo</h3><p class="text-muted">Pengaturan banner dan kode voucher (Dummy UI).</p></div>
+                    <div id="tab-settings" class="admin-pane"><h3>Pengaturan Toko</h3><p class="text-muted">Konfigurasi API Midtrans, WA Gateway, Info Toko (Dummy UI).</p></div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="productFormModal" style="z-index:3000;">
+        <div class="modal-content small-modal glass-card">
+            <button class="close-modal" id="closeFormProduct"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="productFormTitle" class="gradient-text">Tambah Produk Baru</h3>
+            <form id="crudForm" class="modern-form mt-1">
+                <input type="hidden" id="crudId">
+                <input type="text" id="crudNama" placeholder="Nama Produk (Lengkap)" required>
+                <div class="form-grid-2">
+                    <select id="crudKategori" required>
+                        <option value="Smartphone">Smartphone</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Aksesoris">Aksesoris</option>
+                    </select>
+                    <input type="text" id="crudBrand" placeholder="Brand" required>
+                </div>
+                <div class="form-grid-2">
+                    <input type="number" id="crudHarga" placeholder="Harga (Rp)" required>
+                    <input type="number" id="crudStok" placeholder="Jumlah Stok" required>
+                </div>
+                <input type="url" id="crudGambar" placeholder="URL Gambar Produk" required>
+                <textarea id="crudDeskripsi" placeholder="Deskripsi Teknis..." rows="3" required></textarea>
+                <button type="submit" class="btn btn-gradient w-100 mt-1">Simpan Data</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"><i class="fa-solid fa-circle-info"></i> <span id="toastMsg">Notifikasi</span></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
