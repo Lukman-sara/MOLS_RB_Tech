@@ -1,6 +1,5 @@
 # 📱 MOLS RB Tech - Premium Electronics Store
 **Tugas Project Ujian Akhir Semester (UAS) - Mata Kuliah E-Commerce / Pemrograman Web**
-<img width="1254" height="1254" alt="WhatsApp Image 2026-07-07 at 00 53 26" src="https://github.com/user-attachments/assets/fce3fce9-495b-47ab-b667-e4deba0a1912" 
 ---
 
 ## 👨‍🎓 Informasi Mahasiswa
