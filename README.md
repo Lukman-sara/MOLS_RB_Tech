@@ -19,6 +19,7 @@
 Website ini dikembangkan menggunakan arsitektur *Single Page Application* (SPA) murni dengan sistem visualisasi berbasis *section view* dinamis, sehingga perpindahan antar-halaman (Beranda, Produk, Promo, Tentang Kami) berlangsung instan tanpa memicu pemuatan ulang halaman (*page reload*).
 
 🌐 **Live Website (GitHub Pages):** [(https://lukman-sara.github.io/MOLS_RB_Tech/)]
+🎥 **Video Demonstrasi MOLS RB Tech:**(https://youtu.be/HXyeNYWkVDc)
 
 ---
 
